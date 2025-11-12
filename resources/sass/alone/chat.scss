@@ -1,0 +1,238 @@
+@import "../variables";
+@import "../media";
+
+.chat-is-online {
+  display: inline-block;
+  position: fixed;
+  bottom: 130px;
+  right: 2px;
+  padding: 5px;
+  background-color: #a9d7ff;
+  border: 1px solid #ff7373;
+  border-radius: 5px;
+  width: 80px;
+  a {
+    color: #0583ca;
+  }
+}
+
+/**
+Button bubble chat
+*/
+.btn-chat {
+  position: fixed;
+  right: 10px;
+  bottom: 80px;
+  z-index: 10;
+  cursor: pointer;
+  img {
+    width: 50px;
+  }
+  .bubble {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    &::after {
+      content: "";
+      background-color: rgb(6, 180, 0);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      top: 1px;
+      left: 1px;
+    }
+    .bubble-outer-dot {
+      margin: 1px;
+      display: block;
+      text-align: center;
+      opacity: 1;
+      background-color: rgba(0, 168, 0, 0.4);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      //animation: 1.5s linear 0s infinite normal none running bubble-pulse;
+    }
+    .bubble-inner-dot {
+      display: block;
+      text-align: center;
+      opacity: 1;
+      background-color: rgba(15, 177, 0, 0.4);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      //animation: 1.5s linear 0s infinite normal none running bubble-pulse;
+    }
+    &::after {
+      content: "";
+      display: block;
+      text-align: center;
+      opacity: 1;
+      background-color: rgba(0, 168, 28, 0.4);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      //animation: 1.5s linear 0s infinite normal none running bubble-pulse;
+    }
+  }
+}
+
+.modal-header {
+  padding: 5px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#modal-chat {
+  top: unset;
+  left: unset;
+  bottom: 72px;
+  .modal-title {
+    font-size: 15px;
+  }
+  .modal-dialog {
+    width: 350px;
+    margin: 0;
+  }
+  .modal-content {
+    height: 400px;
+    overflow: scroll;
+    &.not-logged-in {
+      height: 170px;
+    }
+  }
+  .modal-body {
+    height: 280px;
+    font-size: 13px;
+    padding: 5px;
+    overflow: scroll;
+    &.not-logged-in {
+      height: 80px;
+    }
+    .a-speak {
+      display: block;
+      padding: 5px 10px;
+      color: #000;
+      border-radius: 5px;
+      clear: both;
+      margin-bottom: 10px;
+      font-size: 15px;
+      max-width: 80%;
+    }
+    .time {
+      color: #4b4b4b;
+      font-size: 12px;
+      display: block;
+      line-height: 12px;
+      padding-top: 2px;
+    }
+    .their {
+      float: left;
+      text-align: left;
+      background-color: rgba(61, 157, 236, 0.78);
+      & .time {
+        text-align: left;
+      }
+    }
+    .mine {
+      float: right;
+      text-align: left;
+      background-color: #e48039c7;
+      & .time {
+        text-align: right;
+      }
+    }
+  }
+  .modal-footer {
+    display: flex;
+    padding: 5px;
+    text-align: left;
+  }
+  form {
+    width: 100%;
+
+    .text-box {
+      float: left;
+      width: calc(100% - 65px);
+      textarea {
+        width: 100%;
+        height: 70px;
+      }
+    }
+
+    .send {
+      float: right;
+      width: 60px;
+      .btn-send {
+        height: 70px;
+      }
+    }
+  }
+}
+
+.chat-center {
+  width: 100%;
+  height: 550px;
+  min-height: 800px;
+  display: flex;
+  color: #000;
+}
+
+/**
+User list
+*/
+.user-list {
+  float: left;
+  height: 100%;
+  overflow: scroll;
+  background-color: #fff;
+  border: 1px solid #525252;
+  border-radius: 5px;
+  .user-item {
+    margin: 1px;
+    padding: 2px;
+    border: 1px solid #525252;
+  }
+}
+
+/**
+Chat box
+*/
+.chat-box {
+  float: right;
+  height: 100%;
+  overflow: scroll;
+  margin-left: 4px;
+  background-color: #fff;
+  border: 1px solid #525252;
+  border-radius: 5px;
+}
+
+/**
+User online status
+*/
+.user-online {
+  table {
+    color: #0a0e17;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 10px;
+  }
+  tr {
+  }
+  th {
+    padding: 5px;
+    border: 1px solid #797979;
+  }
+  td {
+    padding: 5px;
+    border: 1px solid #797979;
+  }
+  .online {
+    color: #0b5ed7;
+    font-weight: bold;
+  }
+  .offline {
+  }
+}

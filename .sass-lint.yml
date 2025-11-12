@@ -1,0 +1,14 @@
+files:
+  include:
+    - 'resources/sass/**/*.scss'
+#    - 'sass/blocks/*.s+(a|c)ss'
+#    - 'sass/elements/*.s+(a|c)ss'
+  ignore:
+    - 'resources/sass/bootstrap.css'
+#    - 'sass/vendor/**/*.scss'
+#    - 'sass/tests/**/*.scss'
+rules:
+  indentation:
+    - 2
+    -
+      size: 2

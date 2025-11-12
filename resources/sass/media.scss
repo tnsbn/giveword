@@ -1,0 +1,36 @@
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 425px;
+$points: (
+  'lg': $lg,
+  'md': $md,
+  'sm': $sm,
+  'xs': $xs
+);
+
+@mixin media-breakpoint-up($point) {
+  $len: "";
+  @if (map_has_key($points, $point)) {
+    $len: map_get($points, $point);
+  } @else {
+    $len: $point;
+  }
+
+  @media (min-width: $len) {
+    @content
+  }
+}
+
+@mixin media-breakpoint-down($point) {
+  $len: "";
+  @if (map_has_key($points, $point)) {
+    $len: map_get($points, $point) - 1px;
+  } @else {
+    $len: $point;
+  }
+
+  @media (max-width: $len) {
+    @content
+  }
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+.handbook-section .handbook {
+  text-align: left;
+}
+.handbook-section .handbook .handbook-item {
+  position: relative;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  box-shadow: inset 0 0 0 1px #cac8c8;
+  box-sizing: border-box;
+  color: #5a5a5a;
+}
+.handbook-section .handbook .handbook-item .edit-message {
+  float: right;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.handbook-section .handbook .handbook-item .edit-message .btn {
+  color: #fff;
+  background-color: #808080;
+  padding: 2px 7px;
+}
+.handbook-section .handbook .handbook-item .edit-message .btn:hover {
+  background-color: #4590ad;
+}
+.handbook-section .handbook .handbook-item .edit-message .dropdown-menu {
+  padding: 0;
+  border: none;
+  left: auto;
+  right: 0;
+}
+.handbook-section .handbook .handbook-item .date {
+  color: #a9a9a9;
+  font-weight: bold;
+}
+.handbook-section .handbook .handbook-item .message {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+.handbook-section .handbook .handbook-item .message .read-more-state {
+  display: none;
+}
+.handbook-section .handbook .handbook-item .message .read-more-wrap {
+  margin-bottom: 10px;
+}
+.handbook-section .handbook .handbook-item .message .read-more-wrap .read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+.handbook-section .handbook .handbook-item .message .read-more-state:checked ~ .read-more-wrap .read-more-target {
+  display: inline;
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+.handbook-section .handbook .handbook-item .message .read-more-state ~ .read-more-trigger:before {
+  content: "Show more ...";
+}
+.handbook-section .handbook .handbook-item .message .read-more-state:checked ~ .read-more-trigger:before {
+  content: "Show less";
+}
+.handbook-section .handbook .handbook-item .message .read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0.5em;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: 0.25em;
+}
+.handbook-section .handbook .handbook-item .tags {
+  margin: 10px 0 10px;
+  color: #a9a9a9;
+  font-weight: bold;
+  font-style: italic;
+}
+.handbook-section .handbook .handbook-item .taken-count {
+  display: inline-block;
+  border-bottom: 1px solid #b2afaf;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-align: right;
+}
+.handbook-section .handbook .handbook-item .comment {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+.handbook-section .handbook .handbook-item .comment .count {
+  cursor: pointer;
+  font-weight: normal;
+}
+.handbook-section .handbook .handbook-item .comment .count:hover {
+  color: #3097d1;
+}
+.handbook-section .handbook .handbook-item .comment .count:after {
+  font-size: 0.8em;
+}
+.handbook-section .handbook .handbook-item .comment .comment-state {
+  display: none;
+}
+.handbook-section .handbook .handbook-item .comment .comment-state ~ .count:after {
+  content: "▼";
+}
+.handbook-section .handbook .handbook-item .comment .comment-state:checked ~ .count:after {
+  content: "▲";
+}

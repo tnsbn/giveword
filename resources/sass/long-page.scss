@@ -1,0 +1,53 @@
+@import "variables";
+@import "media";
+
+.long-page {
+  background-color: $webapp-bg-color-blue;
+  .door-section {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: $webapp-bg-color-blue;
+  }
+  .main-panel {
+    float: left;
+    width: $main-panel-width;
+    text-align: left;
+    margin-right: 20px;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  .custom-paging {
+    text-align: right;
+    color: #5a5a5a;
+    &:after {
+      content: '';
+      display: table;
+      width: 100%;
+      clear: both;
+    }
+    .item-per-page {
+      float: left;
+      margin: 10px 10px 10px 0;
+      select {
+        height: 38px;
+        padding: 5px;
+        border: 1px solid #5b93cb;
+        border-radius: 4px;
+      }
+    }
+    .pagination {
+      float: right;
+      margin: 10px 0;
+    }
+  }
+  .nav-paging {
+    padding: 10px 5px;
+    color: #dadada;
+    a {
+      color: #fff;
+    }
+  }
+}

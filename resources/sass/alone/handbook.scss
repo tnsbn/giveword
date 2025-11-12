@@ -1,0 +1,125 @@
+@import "../variables";
+
+.handbook-section {
+  .handbook {
+    text-align: left;
+    .handbook-item {
+      position: relative;
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px 40px;
+      border-radius: 10px;
+      border: 5px solid #fff;
+      box-shadow: inset 0 0 0 1px #cac8c8;
+      box-sizing: border-box;
+      color: #5a5a5a;
+      .edit-message {
+        float: right;
+        text-align: right;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        .btn {
+          color: #fff;
+          background-color: #808080;
+          padding: 2px 7px;
+          &:hover {
+            background-color: #4590ad;
+          }
+        }
+        .dropdown-menu {
+          padding: 0;
+          border: none;
+          left: auto;
+          right: 0;
+        }
+      }
+      .date {
+        color: #a9a9a9;
+        font-weight: bold;
+      }
+      .message {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        .read-more-state {
+          display: none;
+        }
+
+        .read-more-wrap {
+          margin-bottom: 10px;
+          .read-more-target {
+            opacity: 0;
+            max-height: 0;
+            font-size: 0;
+            transition: .25s ease;
+          }
+        }
+
+        .read-more-state:checked ~ .read-more-wrap .read-more-target {
+          display: inline;
+          opacity: 1;
+          font-size: inherit;
+          max-height: 999em;
+        }
+
+        .read-more-state ~ .read-more-trigger:before {
+          content: 'Show more ...';
+        }
+
+        .read-more-state:checked ~ .read-more-trigger:before {
+          content: 'Show less';
+        }
+
+        .read-more-trigger {
+          cursor: pointer;
+          display: inline-block;
+          padding: 0 .5em;
+          color: #666;
+          font-size: .9em;
+          line-height: 2;
+          border: 1px solid #ddd;
+          border-radius: .25em;
+        }
+      }
+      .tags {
+        margin: 10px 0 10px;
+        color: #a9a9a9;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .taken-count {
+        display: inline-block;
+        border-bottom: 1px solid #b2afaf;
+        border-radius: 5px;
+        padding: 0 10px;
+        text-align: right;
+      }
+      .comment {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        .count {
+          cursor: pointer;
+          font-weight: normal;
+          &:hover {
+            color: #3097d1;
+          }
+        }
+        .count:after {
+          font-size: 0.8em;
+        }
+        .comment-state {
+          display: none;
+        }
+        .comment-state ~ .count:after {
+          content: '\25bc';
+        }
+        .comment-state:checked ~ .count:after {
+          content: '\25b2';
+        }
+      }
+    }
+  }
+}

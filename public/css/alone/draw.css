@@ -1,0 +1,82 @@
+.a-row {
+  width: 100%;
+  margin: 0 auto 10px;
+  padding: 0;
+  float: left;
+}
+
+.random-buttons button {
+  margin: 0 4px 4px 0;
+}
+.random-buttons button:hover, .random-buttons button:active, .random-buttons button:focus {
+  color: #0983c2;
+}
+
+.draw-form {
+  float: none;
+  margin: 0 auto;
+  text-align: left;
+}
+.draw-form [class^=col-] {
+  padding: 0;
+}
+.draw-form .form-control {
+  margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .draw-form {
+    width: 100%;
+  }
+}
+.draw-form #canvas {
+  border: 1px solid #777777;
+  width: 100%;
+  height: 150px;
+  max-height: 200px;
+  background: #fef9dc;
+}
+.draw-form button {
+  margin-right: 2px;
+  margin-bottom: 2px;
+  background: #d6d6d6;
+}
+.draw-form button:hover, .draw-form button:active, .draw-form button:focus {
+  color: #0983c2;
+}
+.draw-form .processing {
+  display: none;
+  position: absolute;
+  margin-left: 2px;
+}
+.draw-form .spinner-grow-sm {
+  width: 1rem;
+  height: 1rem;
+}
+.draw-form .spinner-grow {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  animation: 0.75s linear infinite spinner-grow;
+}
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.message {
+  display: none;
+  background-color: #fef9dd;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}

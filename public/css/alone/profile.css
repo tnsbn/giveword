@@ -1,0 +1,64 @@
+.profile-section {
+  color: #5a5a5a;
+}
+.profile-section .form-profile {
+  background-color: #f9f9f9;
+  border: 1px solid #bbbbbb;
+  border-radius: 0 4px 4px 0;
+  padding: 20px;
+  text-align: left;
+}
+.profile-section .form-profile .form-control[enabled] {
+  background-color: #f1f1f1;
+}
+.profile-section .form-profile .form-control[disabled] {
+  background-color: #f9f9f9;
+  border: 0;
+  cursor: default;
+  box-shadow: none;
+}
+.profile-section .form-profile .help-block {
+  font-weight: bold;
+}
+.profile-section .form-profile .btn-edit:hover {
+  color: #2881b3;
+}
+.profile-section .form-profile .btn-edit-ok {
+  display: none;
+  background-color: #2881b3;
+  color: #d6f1ff;
+  padding: 6px 2px;
+}
+.profile-section .form-profile .link-change-password {
+  background-color: #f9f9f9;
+  border: 0;
+  box-shadow: none;
+}
+.profile-section .form-profile .link-change-password .btn-link {
+  cursor: pointer;
+}
+.profile-section .form-profile .panel-success {
+  padding: 0 12px;
+}
+.profile-section .form-profile .panel-success .alert {
+  padding: 10px;
+}
+.profile-section .form-profile #form-password {
+  padding: 15px 12px;
+}
+.profile-section .form-profile #form-password .card-body {
+  border: 1px solid #d6d6d6;
+  padding-top: 10px;
+}
+@media (max-width: 991px) {
+  .profile-section .form-profile #form-password .card-body {
+    padding: 10px;
+  }
+}
+.profile-section .form-profile #form-password .form-control {
+  background-color: #f1f1f1;
+}
+.profile-section .form-profile #form-password .panel-body .alert {
+  padding: 10px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,58 @@
+
+// Body
+$body-bg: #f5f8fa;
+
+// Webapp colors
+$blue-color: #2881b3; // #1196e0
+$takeword-color: #e48039; // #e48039
+$webapp-bg-color-blue: #6b9bb7; // #6b9bb7
+$webapp-dark-text-color: #5a5a5a; // #5a5a5a
+$webapp-bright-text-color: #d6f1ff; // #d6f1ff
+
+// Webapp sizes
+$webapp-menu-height-xs: 90px;
+$webapp-menu-height-sm: 124px;
+$webapp-menu-height-md: 160px;
+$webapp-menu-height-lg: 190px;
+
+// Webapp buttons
+$skew-door-buttons: false;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #d6f1ff;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+$right-panel-width: 260px;
+$right-panel-padding: 10px;
+$main-panel-width: calc(100% - 280px);
+// 280 = $right-panel-width + (2 * $right-panel-padding)

@@ -1,0 +1,91 @@
+
+/*SLIDER SECTION CSS*/
+
+*{
+    box-sizing: border-box;
+}
+body{margin: auto;font-family: calibri;}
+
+code {
+    font-family: monospace;
+    display: inline-block;
+    background-color: #c6c6c6ad;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+.container-fluid{
+    padding: 0 15px;
+    /*height: 500px;*/
+}
+.slider-inner{
+    padding: 0;
+    /*height: 500px;*/
+}
+.slider-inner .item img{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    max-width: 720px;
+    /* height: -webkit-fill-available; */
+    max-height: 400px;
+}
+.slider-inner h1{
+    color: purple;
+}
+
+.owl-wrapper-outer {
+    /*position: relative;*/
+    /*top: 70px;*/
+    /*height: 800px;*/
+}
+.owl-controls.clickable {
+    /*position: absolute;*/
+    /*top: 0;*/
+    width: 100%;
+}
+.owl-controls .owl-pagination {
+    /*position: relative;*/
+    /*height: 30px;*/
+    /*top: 30px;*/
+}
+.owl-controls .owl-buttons {
+    /*position: relative;*/
+    /*height: 30px;*/
+    /*top: -30px;*/
+}
+.owl-theme .owl-controls .owl-buttons div {
+    opacity: 1;
+    background-color: #4360bf;
+}
+.owl-item {
+    /*min-height: 500px;*/
+    /*height: 800px;*/
+    max-height: 600px;
+    /*margin: 0 10px;*/
+}
+.fixed-height {
+    /*height: 800px !important;*/
+}
+.img-frame {
+    /*height: 800px;*/
+}
+.stuff-title {
+    font-size: 25px;
+    margin-bottom: 0;
+    color: #2b2b2b;
+}
+.description {
+    width: 80%;
+    margin: 5px 10%;
+    line-height: 24px;
+}
+figcaption {
+    background-color: #0b0b0b;
+    color: #e4e4e4;
+    padding: 10px;
+    line-height: 24px;
+    /*text-align: center;*/
+    margin-top: 10px;
+    border-radius: 5px;
+    /*border: 1px solid #898989;*/
+}

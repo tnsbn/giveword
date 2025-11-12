@@ -1,0 +1,392 @@
+@import "variables";
+@import "media";
+
+html, body {
+  background-color: #fff;
+  color: $webapp-dark-text-color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
+}
+
+.with-bg-img {
+  background: url(../images/homebg.jpg) no-repeat 100% 100%;
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #d6f1ff;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+.navbar-top {
+  @include media-breakpoint-down(xs) {
+    //background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/banner_768.jpg) repeat-y right top;
+    //background: $webapp-bg-color-blue url(../images/banner/banner_768.jpg) no-repeat right top;
+    background-size: auto $webapp-menu-height-xs;
+  }
+  @include media-breakpoint-up(xs) {
+    //background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/banner_768.jpg) repeat-y right top;
+    //background: $webapp-bg-color-blue url(../images/banner/banner_768.jpg) no-repeat right top;
+    background-size: auto $webapp-menu-height-xs;
+  }
+  @include media-breakpoint-up(sm) {
+    //background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/banner_1600_260.jpg) no-repeat center bottom;
+    //background: $webapp-bg-color-blue url(../images/banner/banner_1600_260.jpg) no-repeat right top;
+    background-size: 100% auto;
+  }
+}
+
+/* MENU */
+.main_menu_bg {
+  margin-top:0;
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    transition:.6s;
+    z-index: 100;
+    .navbar-toggle {
+      background-color: #222;
+    }
+    .navbar-nav {
+      ul.dropdown-menu {
+        margin-top: 2px;
+        border: none;
+        background-color: $blue-color;
+        li a {
+          color: $webapp-bright-text-color;
+          &:hover, &:focus {
+            background-color: #f5f5f5;
+            color: $takeword-color;
+          }
+        }
+      }
+      li a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $webapp-bright-text-color;
+        &:hover, &:focus {
+          color: $takeword-color;
+        }
+      }
+      .active a {
+        color: #ff9715;
+        background-color: transparent;
+        border-bottom: 1px solid #FFF;
+        margin-bottom: -1px;
+        padding-bottom: 33px;
+      }
+      .open > a, .open > a:hover, .open > a:focus {
+        background-color: $blue-color;
+      }
+      & > li > a {
+        &:hover, &:focus {
+          color: #ffd49b;
+          background-color: #2881b3;
+          @media (max-width: 767px) {
+            background-color: rgba(73, 178, 236, 0.4);
+            color: #eca950;
+          }
+        }
+      }
+    }
+    /* Mobile version */
+    #navbar-mobile {
+      @media (max-width: 767px) {
+        float: right;
+        min-width: 280px;
+        margin-right: 0;
+        background-color: rgba(33, 106, 148, 0.92); //rgba(61, 92, 103, 0.91);
+        border-top: none;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .navbar {
+    margin-bottom: 0;
+    //min-height: $webapp-menu-height;
+    height: $webapp-menu-height-xs;
+    @include media-breakpoint-up(xs) {
+      height: $webapp-menu-height-xs;
+    }
+    @include media-breakpoint-up(sm) {
+      height: $webapp-menu-height-sm;
+    }
+    @include media-breakpoint-up(md) {
+      height: $webapp-menu-height-md;
+    }
+    @include media-breakpoint-up(lg) {
+      height: $webapp-menu-height-lg;
+    }
+  }
+  .container-fluid {
+    margin-top: 20px;
+  }
+}
+/* End of MENU */
+
+/* DOOR SECTION */
+.door-section {
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  .doors {
+    width: 50%;
+    float: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    @if($skew-door-buttons) {
+      transform: skewX(-20deg);
+    }
+    &.writing {
+      background-color: $blue-color; // #21424a;
+    }
+    &.takeword {
+      background-color: $takeword-color; // #2fac6c;
+    }
+    @media (max-width: 425px) {
+      transform: none;
+    }
+    a {
+      color: #fff;
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      padding: 25px 0;
+      display: inline-block;
+      width: 100%;
+      @if($skew-door-buttons) {
+        transform: skewX(20deg);
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 15px 0;
+        transform: none;
+      }
+    }
+  }
+}
+/* End of DOOR SECTION */
+
+/* BUILDING SECTION */
+// This is used for long-page template.
+.building-section {
+  width: 100%;
+  padding: 10px 0 100px;
+  position: absolute;
+  top: $webapp-menu-height-xs;
+  overflow: hidden;
+  color: $webapp-bright-text-color;
+  // top attribute
+  @include media-breakpoint-up(xs) {
+    top: $webapp-menu-height-xs;
+  }
+  @include media-breakpoint-up(sm) {
+    top: $webapp-menu-height-sm;
+  }
+  @include media-breakpoint-up(md) {
+    top: $webapp-menu-height-md;
+  }
+  @include media-breakpoint-up(lg) {
+    top: $webapp-menu-height-lg;
+  }
+
+  // background attribute
+  @include media-breakpoint-down(xs) {
+    background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/building_768.jpg) no-repeat right top;
+    background-size: auto $webapp-menu-height-xs;
+  }
+  @include media-breakpoint-up(xs) {
+    background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/building_768.jpg) no-repeat right top;
+    background-size: auto $webapp-menu-height-xs;
+  }
+  @include media-breakpoint-up(sm) {
+    background: $webapp-bg-color-blue;
+    background: $webapp-bg-color-blue url(../images/banner/building_1600.jpg) no-repeat center top;
+    background-size: 100% auto;
+  }
+}
+/* End of BUILDING SECTION */
+
+/* WRITE SECTION */
+.write-section {
+  input::placeholder {
+    color: #cac38d;
+  }
+}
+/* End of WRITE SECTION */
+
+/* LOGIN SECTION */
+.login-section {
+  color: $webapp-bright-text-color;
+  .link-forgot-password {
+    color: $webapp-bright-text-color;
+  }
+}
+/* End of LOGIN SECTION */
+
+/* REGISTER */
+.register-section {
+}
+.register {
+  width:100%;
+  overflow: hidden;
+}
+.register .single_login {
+  background: #21424a;
+}
+.single_register {
+  background: #2fac6c;
+  transform: skewX(-20deg);
+}
+.single_register a {
+  color: #fff;
+  font-size: 1.375rem;
+  text-transform: uppercase;
+  padding: 25px 0px;
+  display: inline-block;
+  transform: skewX(20deg);
+}
+/* End of REGISTER */
+
+/* Welcome.Search-form */
+.default .search-section {
+  width: 100%;
+  padding: 0 0 100px;
+  position: fixed;
+  top: 100px;
+  text-align: center;
+  z-index: 1031;
+  min-height: 100px;
+  max-height: 400px;
+  overflow: scroll;
+  @include media-breakpoint-down(11px) {
+    padding: 0;
+  }
+  .half-page {
+    width: 50%;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .search-form {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    [class^="col-"] {
+      padding: 2px;
+    }
+    .form-control {
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+/* End of Welcome.Search-form */
+.badge-takeword {
+  background-color: $takeword-color;
+  &:hover {
+    background-color: #777777;
+  }
+}
+.color-takeword {
+  color: $takeword-color;
+}
+
+.modal {
+  .modal-content {
+    color: $webapp-dark-text-color;
+  }
+  .modal-header {
+    .modal-title {
+      display: inline-block;
+      font-size: 18px;
+    }
+    .close {
+      font-size: 26px;
+    }
+  }
+  .modal-body {
+    font-size: 16px;
+    .message-to {
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
+#modal-delete {
+  .modal-header {
+    .modal-title {
+      color: #ff2d12;
+    }
+  }
+}
+#webapp-notify {
+  bottom: unset;
+  .modal-header {
+    border-bottom: 0;
+  }
+}
+#modal-edit {
+  .modal-header {
+    .modal-title {
+      color: $brand-primary;
+    }
+  }
+}

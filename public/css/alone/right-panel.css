@@ -1,0 +1,20 @@
+.right-panel {
+  float: right;
+  width: 260px;
+  min-height: 280px;
+  min-width: 260px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 2px;
+}
+@media (max-width: 767px) {
+  .right-panel {
+    display: none;
+  }
+}
+.right-panel .nav {
+  margin-bottom: 20px;
+}
+.right-panel .tab-content {
+  color: #5a5a5a;
+}
