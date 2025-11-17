@@ -1,6 +1,6 @@
 # A Complete Website in Laravel
 
-Elastic Search | Redis | RabbitMQ | Canvas | Python
+Elastic Search | Redis | RabbitMQ Live chat | Canvas | Python
 
 
 ## 1. 🛠️ Installation Guide
