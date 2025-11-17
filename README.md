@@ -1,5 +1,8 @@
 # A Complete Website in Laravel
 
+Elastic Search | Redis | RabbitMQ | Canvas | Python
+
+
 ## 1. 🛠️ Installation Guide
 * cp .env.example .env
 * composer install
