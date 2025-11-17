@@ -1,4 +1,4 @@
-# * Complete website in Laravel *
+# A Complete Website in Laravel
 
 ## 1. 🛠️ Installation Guide
 * cp .env.example .env
@@ -53,7 +53,7 @@ php artisan vendor:publish --provider="Elastic\Client\ServiceProvider"
 php artisan vendor:publish --provider="Elastic\Migrations\ServiceProvider"
 ```
 #### If successful:
-[<img width="800px" src="public/images/elastic.png" />]
+[<img width="800px" src="public/images/elastic.png" />]()
 
 
 ## 4. Run
@@ -72,6 +72,6 @@ Use PHP Codesniffer and ESLint to validate:
 
 ### Live chat
 
-[<img width="600px" src="public/images/rabbitmq.png" />]()
+[<img width="600px" src="public/images/livechat.png" />]()
 
 
