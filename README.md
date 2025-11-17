@@ -1,6 +1,6 @@
-# * Giveword *
+# * Complete website in Laravel *
 
-## 1. Install packages
+## 1. 🛠️ Installation Guide
 * cp .env.example .env
 * composer install
 * npm install
@@ -11,7 +11,9 @@
 
 ## 2. RabbitMQ Configuration
 
-Add connection to `config/queue.php`:
+RabbitMQ is used for live chat.
+
+### Add connection to `config/queue.php`:
 
 > This is the minimal config for the rabbitMQ connection/driver to work.
 
@@ -40,7 +42,9 @@ Add connection to `config/queue.php`:
 ```
 
 
-## 3. Elastic configuration
+## 3. Elastic Configuration
+
+Follow the [Official Elasticsearch](https://github.com/elastic/elasticsearch-php) page for detail.
 
 ```
 php artisan vendor:publish --provider="Elastic\Client\ServiceProvider"
@@ -48,28 +52,26 @@ php artisan vendor:publish --provider="Elastic\Client\ServiceProvider"
 ```
 php artisan vendor:publish --provider="Elastic\Migrations\ServiceProvider"
 ```
+#### If successful:
+[<img width="800px" src="public/images/elastic.png" />]
 
-#### Migration:
-```
-php artisan elastic:migrate --force
-```
-
-#### Revert the last executed migrations:
-```
-php artisan elastic:migrate:rollback
-```
-
-#### Revert all previously migrated files:
-```
-php artisan elastic:migrate:reset
-```
-
-#### Drop all existing indices and rerun the migrations:
-```
-php artisan elastic:migrate:fresh
-```
 
 ## 4. Run
 ```
 php artisan serve
 ```
+
+## 5. 📷 Screenshots
+
+### Code Standard:
+Use PHP Codesniffer and ESLint to validate: 
+``` npm run cs ```
+``` npm run lint ```
+
+[<img width="600px" src="public/images/codestandard.png" />]()
+
+### Live chat
+
+[<img width="600px" src="public/images/rabbitmq.png" />]()
+
+
